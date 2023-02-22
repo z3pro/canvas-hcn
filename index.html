@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <canvas id="myCanvas" style=" height: 100vh; width: 100vw;"></canvas>
+    <script>
+        class Rectangle {
+            constructor(width, height) {
+                this.width = width;
+                this.height = height;
+            }
+            createCircle() {
+                let ctx = document.getElementById("myCanvas").getContext("2d");
+                ctx.fillRect(10, 10,this.width,this.height);
+            }
+            setWidth(width) {
+                this.width = width;
+            }
+            getWidth() {
+                return this.width + 'px';
+            }
+            setHeight(height) {
+                this.height = height;
+            }
+            getHeight() {
+                return this.height + 'px'
+            }
+            getAcreage() {
+                return this.width * this.height;
+            }
+            getPerimeter() {
+                return (this.width + this.height) * 2;
+            }
+        }
+        let hcn =  new Rectangle(20,30);
+        console.log(hcn.getAcreage());
+    </script>
+
+</body>
+
+</html>
